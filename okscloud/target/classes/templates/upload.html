@@ -9,9 +9,12 @@
 <header th:insert="parts/header :: header"></header>
 
 <div class="container">
-    <h1 class="display-4">Загрузка файлов</h1>
-    <p>На этой странице вы можете загрузить ваши файлы в облако</p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Загрузить »</a></p>
+    <form action="#" th:action="@{/upload}" th:object="${upload}" method="post">
+        <h1 class="display-4">Загрузка файлов</h1>
+        <p>На этой странице вы можете загрузить ваши файлы в облако</p>
+        <input type="file" name="file">
+        <input type="submit" value="upload">
+    </form>
 </div>
 
 <div th:insert="parts/footer :: footer"></div>
