@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Добро пожаловать!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="parts/header :: header"></header>
+
+<div class="container">
+    <h1 class="display-4">Загрузка файлов</h1>
+    <p>На этой странице вы можете загрузить ваши файлы в облако</p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Загрузить »</a></p>
+</div>
+
+<div th:insert="parts/footer :: footer"></div>
+</body>
+</html>

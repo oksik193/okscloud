@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Регистрация</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="parts/header :: header"></header>
+
+    <div th:if="${param.error}">
+        Что то пошло не так.
+    </div>
+
+    <h1>Регистрация</h1>
+
+    <form th:action="@{/signUp}" method="post">
+        <div><label> Login : <input type="text" name="username"/> </label></div>
+        <div><label> Password: <input type="password" name="password"/> </label></div>
+        <div><label> Retype Password: <input type="password" name="password2"/> </label></div>
+        <div><input type="submit" value="Sign In"/></div>
+    </form>
+</body>
+</html>
